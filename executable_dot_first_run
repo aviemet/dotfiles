@@ -1,0 +1,10 @@
+OS=$(grep -oP "(?<=^ID=).*" /etc/os-release)
+
+if [ -n "$command -v zsh)" ]; then
+  if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "not EXISTS"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting)"
+    sh -c "$(git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions)"
+  fi
+fi
